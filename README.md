@@ -58,6 +58,57 @@ An interactive pathfinding visualizer built with **C++** and **SFML** that allow
 | Blue   | Visited node |
 | Yellow | Final path   |
 
+## Requirements
+
+* C++17 or later
+* SFML 3.x
+* GCC / MinGW / MSVC compatible compiler
+
+### Installing SFML
+
+Download SFML from the official website:
+
+https://www.sfml-dev.org/download/
+
+Make sure to download the version matching your compiler and architecture.
+
+## Build Instructions
+
+### Windows (MinGW / MSYS2)
+
+Compile the project using:
+
+```bash
+g++ Main.cpp bfs.cpp dfs.cpp astar.cpp -o MazeSolver ^
+-I"<SFML_INCLUDE_PATH>" ^
+-L"<SFML_LIB_PATH>" ^
+-lsfml-graphics ^
+-lsfml-window ^
+-lsfml-system
+```
+
+Example:
+
+```bash
+g++ Main.cpp bfs.cpp dfs.cpp astar.cpp -o MazeSolver ^
+-I"C:\SFML\include" ^
+-L"C:\SFML\lib" ^
+-lsfml-graphics ^
+-lsfml-window ^
+-lsfml-system
+```
+
+Run the executable:
+
+```bash
+.\MazeSolver.exe
+```
+
+### Notes
+
+* Ensure the required SFML DLLs are available in the executable directory or included in your system PATH.
+* Place a valid `.ttf` font file (e.g. `arial.ttf`) in the project directory if using on-screen text rendering.
+
 ## Technologies Used
 
 * C++
